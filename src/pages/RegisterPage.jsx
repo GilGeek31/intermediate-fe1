@@ -135,7 +135,7 @@ export default function RegisterPage() {
                 variant="primary"
                 onClick={() => console.log("ke halaman daftar")}
               >
-                Daftar
+                Login
               </Button>
             </form>
 
