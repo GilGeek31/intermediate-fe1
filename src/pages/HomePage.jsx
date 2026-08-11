@@ -9,7 +9,7 @@ import Footer from "../components/layout/Footer";
 export default function HomePage() {
   return (
     <div className="bg-slate-100">
-      <Navbar />
+      <Navbar isLogin={true} />
       <Hero
         backgroundImage={HeroImg1}
         title="Revolusi Pembelajaran: Temukan Ilmu Baru melalui Platform Video Interaktif!"

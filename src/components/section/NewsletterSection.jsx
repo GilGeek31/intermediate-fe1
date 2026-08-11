@@ -12,7 +12,7 @@ export default function NewsletterSection({ backgroundImage }) {
   return (
     <section className="max-w-7xl mx-auto px-4 md:px-8 mt-16">
       <div
-        className="relative rounded-2xl overflow-hidden bg-cover bg-center"
+        className="relative rounded-lg overflow-hidden bg-cover bg-center"
         style={{ backgroundImage: `url('${backgroundImage}')` }}
       >
         {/* Overlay gelap */}
@@ -20,10 +20,10 @@ export default function NewsletterSection({ backgroundImage }) {
 
         {/* Konten */}
         <div className="relative flex flex-col items-center text-center gap-3 px-6 md:px-12 py-14 md:py-16">
-          <span className="text-primary-400 text-body-sm font-bold tracking-wide">
+          <span className=" text-text-news text-h5 font-thin tracking-wide">
             NEWSLETTER
           </span>
-          <h3 className="text-white font-bold text-2xl md:text-h4">
+          <h3 className="text-white text-h3 font-bold md:text-h4">
             Mau Belajar Lebih Banyak ?
           </h3>
           <p className="text-white/80 text-body-md max-w-xl">

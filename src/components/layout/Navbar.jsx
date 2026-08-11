@@ -4,7 +4,7 @@ import avatar from "../../assets/Avatar.png";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
-export default function Navbar() {
+export default function Navbar({ isLogin = false }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -18,28 +18,32 @@ export default function Navbar() {
         />
 
         {/* Menu Desktop - hanya muncul di md ke atas */}
-        <nav className="hidden md:flex items-center gap-6">
-          <a
-            href="/kategori"
-            className="text-body-md text-text-dark-primary hover:text-primary-500"
-          >
-            Kategori
-          </a>
-          <img
-            src={avatar}
-            alt="User avatar"
-            className="w-9 h-9 rounded-full object-cover"
-          />
-        </nav>
+        {isLogin && (
+          <nav className="hidden md:flex items-center gap-6">
+            <a
+              href="/kategori"
+              className="text-body-md text-text-dark-primary hover:text-primary-500"
+            >
+              Kategori
+            </a>
+            <img
+              src={avatar}
+              alt="User avatar"
+              className="w-9 h-9 rounded-full object-cover"
+            />
+          </nav>
+        )}
 
         {/* Hamburger Button - hanya muncul di bawah md */}
-        <button
-          className="md:hidden text-text-dark-primary px-4"
-          onClick={() => setIsMenuOpen((prev) => !prev)}
-          aria-label="Toggle menu"
-        >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        {isLogin && (
+          <button
+            className="md:hidden text-text-dark-primary px-4"
+            onClick={() => setIsMenuOpen((prev) => !prev)}
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        )}
       </div>
 
       {isMenuOpen && (

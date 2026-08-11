@@ -72,7 +72,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <hr className="border-white/10 my-2" />
+        <hr className="border-grey-500 my-2" />
 
         {/* Bottom */}
         <div className="flex flex-col-reverse sm:flex-row items-start justify-between gap-4">

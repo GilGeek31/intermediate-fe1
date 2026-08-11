@@ -12,6 +12,7 @@ import SelectField from "../components/ui/SelectField";
 import AuthHeader from "../components/auth/AuthHeader";
 import Divider from "../components/ui/Divider";
 import GoogleButton from "../components/auth/GoogleButton";
+import Navbar from "../components/layout/Navbar";
 
 const registerSchema = z
   .object({
@@ -49,16 +50,10 @@ export default function RegisterPage() {
   return (
     <div className="h-[994px]">
       <div className="h-full bg-bg-base">
-        <header className="w-full bg-bg-primary border-b border-[#f0f0f0] flex justify-start items-center px-8 py-[15px]">
-          <img
-            src={logo}
-            alt="Logo Video Belajar"
-            className="w-[237px] h-[56px] object-contain"
-          />
-        </header>
+        <Navbar />
 
         <div className="xl:h-full flex p-9 items-center justify-center bg-secondary-50">
-          <Card>
+          <Card className="">
             <AuthHeader
               title="Pendaftaran Akun"
               subtitle="Yuk, daftarkan akunmu sekarang juga."

@@ -23,7 +23,7 @@ export default function Hero({
             ${isCenter ? "items-center text-center" : "items-start text-left"}`}
         >
           <h1
-            className={`text-white font-bold text-2xl md:text-4xl lg:text-h2 leading-tight
+            className={`text-white font-bold text-h3 md:text-4xl lg:text-h2 leading-tight
             ${isCenter ? "max-w-3xl" : "max-w-2xl"}`}
           >
             {title}
@@ -53,7 +53,7 @@ export default function Hero({
             <button
               onClick={onCtaClick}
               className="bg-primary-600 hover:bg-primary-500 hover:text-text-dark-primary
-               text-white font-semibold text-body-md px-6 py-3
+               text-white font-semibold text-body-md px-2 py-2
                 rounded-lg transition-colors mt-2"
             >
               {ctaText}

@@ -24,7 +24,7 @@ const dummyCourses = Array.from({ length: 9 }).map((_, i) => ({
     company: "Gojek",
     avatar: ImgAvatar,
   },
-  rating: { value: 3.5, count: 86 },
+  rating: { value: 3.4, count: 98 },
   price: "Rp. 300k",
 }));
 
@@ -45,7 +45,7 @@ export default function CourseSection() {
 
       <CategoryTabs categories={categories} onChange={setActiveCategory} />
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-6">
         {dummyCourses.map((course) => (
           <CourseCard key={course.id} {...course} />
         ))}

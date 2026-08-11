@@ -29,6 +29,7 @@
     /* ===== TEXT ===== */
     --color-text-dark-primary: #222325;
     --color-text-dark-secondary: #757575;
+    --color-text-news: #c1c2c4;
     --color-text-dark-disabled: #b4b2b7;
 
     --color-text-light-primary: #ffffff;
@@ -36,12 +37,14 @@
     --color-text-light-disabled: #9d9ea1;
 
     --color-text-button-primary: #3ecf4c;
+    --color-text-tertiary: #f64920;
 
     /* ===== BACKGROUND & BORDER ===== */
     --color-bg-primary: #ffbd3a;
     --color-bg-base: #fffdf3;
     --color-bg-secondary: #f4f5f8;
     --color-border: #e5e6ea;
+    --color-bg-secondary-60: #f4f5fa;
     --color-secondary-50: #fdfaf3;
 
     /* ===== STATE: INFO ===== */
