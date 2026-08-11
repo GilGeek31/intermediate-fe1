@@ -1,0 +1,90 @@
+import logo from '../assets/logo-video-belajar.png'
+
+import { useForm } from "react-hook-form"
+import { zodResolver } from "@hookform/resolvers/zod"
+import { z } from "zod"
+
+import Card from "../components/ui/Card"
+import Button from "../components/ui/Button"
+import InputField from "../components/ui/InputField"
+import Divider from "../components/ui/Divider"
+import AuthHeader from "../components/auth/AuthHeader"
+import GoogleButton from "../components/auth/GoogleButton"
+
+const loginSchema = z.object({
+  email: z.string().min(1, "Email wajib diisi").email("Format email tidak valid"),
+  password: z.string().min(1, "Kata sandi wajib diisi").min(6, "Minimal 6 karakter"),
+})
+
+export default function LoginPage() {
+
+    const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+    } = useForm({
+    resolver: zodResolver(loginSchema),
+    })
+
+    const onSubmit = async (data) => {
+        console.log("Login data:", data)
+        // TODO: panggil API login di sini
+    }
+
+    return (
+        <div className="h-[994px]" >
+            <div className="h-full bg-bg-base">
+                <header className="w-full bg-bg-primary border-b border-[#f0f0f0] flex justify-start items-center px-8 py-[15px]">
+                    <img src={logo} alt="Logo Video Belajar" className="w-[237px] h-[56px] object-contain" />
+                </header>
+            
+                <div className="xl:h-full flex p-9 items-center justify-center bg-secondary-50">
+                    <Card>
+                        <AuthHeader
+                        title="Masuk ke Akun"
+                        subtitle="Yuk, lanjutin belajarmu di videobelajar."
+                        />
+
+                        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
+                            <InputField
+                                label="E-Mail"
+                                required
+                                type="email"
+                                placeholder="nama@email.com"
+                                error={errors.email?.message}
+                                {...register("email")}
+                            />
+
+                            <InputField
+                                label="Kata Sandi"
+                                required
+                                type="password"
+                                placeholder="Masukkan kata sandi"
+                                error={errors.password?.message}
+                                {...register("password")}
+                            />
+
+                            <div className="text-right -mt-2">
+                                <a href="/forgot-password" className="text-body-sm text-text-dark-primary hover:underline">
+                                Lupa Password?
+                                </a>
+                            </div>
+
+                            <Button type="submit" variant="secondary" disabled={isSubmitting}>
+                                {isSubmitting ? "Memproses..." : "Masuk"}
+                            </Button>
+
+                            <Button type="button" variant="primary" onClick={() => console.log("ke halaman daftar")}>
+                                Daftar
+                            </Button>
+                        </form>
+
+                        <Divider text="atau" />
+
+                        <GoogleButton onClick={() => console.log("Google SSO")} />
+                    </Card>
+                </div>
+            </div>
+        </div>
+    )
+}
