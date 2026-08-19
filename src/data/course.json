@@ -1,0 +1,127 @@
+[
+  {
+    "id": 1,
+    "thumbnail": "/img/card-image/Big 4 Auditor Financial Analyst_1.jpg",
+    "title": "Big 4 Auditor Financial Analyst",
+    "description": "Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan...",
+    "instructor": {
+      "name": "Jenna Ortega",
+      "role": "Senior Accountant",
+      "company": "Gojek",
+      "avatar": "img/card-avatar/avatar-01.png"
+    },
+    "rating": { "value": 3.5, "count": 86 },
+    "price": "Rp. 300k"
+  },
+  {
+    "id": 2,
+    "thumbnail": "/img/card-image/Big 4 Auditor Financial Analyst_1.jpg",
+    "title": "UI/UX Design Fundamentals",
+    "description": "Pelajari dasar-dasar desain UI/UX dari nol hingga siap kerja...",
+    "instructor": {
+      "name": "Budi Santoso",
+      "role": "Product Designer",
+      "company": "Tokopedia",
+      "avatar": "/img/card-avatar/avatar-01.png"
+    },
+    "rating": { "value": 4.2, "count": 120 },
+    "price": "Rp. 250k"
+  },
+  {
+    "id": 3,
+    "thumbnail": "/img/card-image/Big 4 Auditor Financial Analyst_1.jpg",
+    "title": "Digital Marketing Strategy",
+    "description": "Strategi pemasaran digital untuk meningkatkan penjualan bisnis...",
+    "instructor": {
+      "name": "Sarah Wijaya",
+      "role": "Marketing Lead",
+      "company": "Shopee",
+      "avatar": "/img/card-avatar/avatar-01.png"
+    },
+    "rating": { "value": 4.0, "count": 95 },
+    "price": "Rp. 200k"
+  },
+  {
+    "id": 4,
+    "thumbnail": "/img/card-image/Big 4 Auditor Financial Analyst_1.jpg",
+    "title": "Big 4 Auditor Financial Analyst",
+    "description": "Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan...",
+    "instructor": {
+      "name": "Jenna Ortega",
+      "role": "Senior Accountant",
+      "company": "Gojek",
+      "avatar": "img/card-avatar/avatar-01.png"
+    },
+    "rating": { "value": 3.5, "count": 86 },
+    "price": "Rp. 300k"
+  },{
+    "id": 5,
+    "thumbnail": "/img/card-image/Big 4 Auditor Financial Analyst_1.jpg",
+    "title": "Big 4 Auditor Financial Analyst",
+    "description": "Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan...",
+    "instructor": {
+      "name": "Jenna Ortega",
+      "role": "Senior Accountant",
+      "company": "Gojek",
+      "avatar": "img/card-avatar/avatar-01.png"
+    },
+    "rating": { "value": 3.5, "count": 86 },
+    "price": "Rp. 300k"
+  },
+  {
+    "id": 6,
+    "thumbnail": "/img/card-image/Big 4 Auditor Financial Analyst_1.jpg",
+    "title": "Big 4 Auditor Financial Analyst",
+    "description": "Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan...",
+    "instructor": {
+      "name": "Jenna Ortega",
+      "role": "Senior Accountant",
+      "company": "Gojek",
+      "avatar": "img/card-avatar/avatar-01.png"
+    },
+    "rating": { "value": 3.5, "count": 86 },
+    "price": "Rp. 300k"
+  },
+  {
+    "id": 7,
+    "thumbnail": "/img/card-image/Big 4 Auditor Financial Analyst_1.jpg",
+    "title": "Big 4 Auditor Financial Analyst",
+    "description": "Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan...",
+    "instructor": {
+      "name": "Jenna Ortega",
+      "role": "Senior Accountant",
+      "company": "Gojek",
+      "avatar": "img/card-avatar/avatar-01.png"
+    },
+    "rating": { "value": 3.5, "count": 86 },
+    "price": "Rp. 300k"
+  },
+  {
+    "id": 8,
+    "thumbnail": "/img/card-image/Big 4 Auditor Financial Analyst_1.jpg",
+    "title": "Big 4 Auditor Financial Analyst",
+    "description": "Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan...",
+    "instructor": {
+      "name": "Jenna Ortega",
+      "role": "Senior Accountant",
+      "company": "Gojek",
+      "avatar": "img/card-avatar/avatar-01.png"
+    },
+    "rating": { "value": 3.5, "count": 86 },
+    "price": "Rp. 300k"
+  },
+  {
+    "id": 9,
+    "thumbnail": "/img/card-image/Big 4 Auditor Financial Analyst_1.jpg",
+    "title": "Big 4 Auditor Financial Analyst",
+    "description": "Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan...",
+    "instructor": {
+      "name": "Jenna Ortega",
+      "role": "Senior Accountant",
+      "company": "Gojek",
+      "avatar": "img/card-avatar/avatar-01.png"
+    },
+    "rating": { "value": 3.5, "count": 86 },
+    "price": "Rp. 300k"
+  }
+]

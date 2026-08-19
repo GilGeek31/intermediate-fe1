@@ -8,7 +8,7 @@ import Footer from "../components/layout/Footer";
 
 export default function HomePage() {
   return (
-    <div className="bg-slate-100">
+    <div className="bg-slate-100 flex flex-col gap-1 items-center max-w-[1440px] justify-center">
       <Navbar isLogin={true} />
       <Hero
         backgroundImage={HeroImg1}

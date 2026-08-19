@@ -41,8 +41,8 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-bg-base mt-16">
-      <div className="max-w-7xl mx-auto px-4 md:px-8 py-4">
+    <footer className="w-full bg-bg-base mt-16">
+      <div className=" w-full px-4 md:px-8 mt-8 xl:px-32">
         <div className="flex flex-col md:flex-row gap-5 md:gap-16">
           {/* Brand */}
           <div className="flex items-start flex-col gap-1 md:w-1/3">
@@ -75,7 +75,7 @@ export default function Footer() {
         <hr className="border-grey-500 my-2" />
 
         {/* Bottom */}
-        <div className="flex flex-col-reverse sm:flex-row items-start justify-between gap-4">
+        <div className="flex flex-col-reverse sm:flex-row items-start justify-between gap-4 mb-5 md:mb-10">
           <p className="text-body-sm text-text-dark-secondary">
             @2023 VideoBelajar. All Rights Reserved.
           </p>

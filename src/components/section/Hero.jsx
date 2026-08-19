@@ -11,7 +11,7 @@ export default function Hero({
   const isCenter = align === "center";
 
   return (
-    <section className="max-w-7xl mx-auto px-4 md:px-8 mt-8">
+    <section className=" w-full px-4 md:px-8 mt-8 xl:px-32">
       <div
         className="relative rounded-2xl overflow-hidden bg-cover bg-center"
         style={{ backgroundImage: `url('${backgroundImage}')` }}

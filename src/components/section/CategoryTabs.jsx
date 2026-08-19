@@ -18,7 +18,7 @@ export default function CategoryTabs({ categories, onChange }) {
             ${
               active === cat
                 ? "text-tertiary-100 border-b-4 border-b-amber-800"
-                : "bg-grey-100 text-text-dark-secondary hover:bg-grey-200"
+                : "text-text-dark-secondary hover:text-tertiary-100"
             }`}
         >
           {cat}
