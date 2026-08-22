@@ -43,7 +43,7 @@ export default function LoginPage() {
       <div className="h-full bg-bg-base">
         <Navbar />
 
-        <div className="xl:h-full flex p-9 items-center justify-center bg-secondary-50">
+        <div className="xl:h-full flex p-9 items-center justify-center">
           <Card>
             <AuthHeader
               title="Masuk ke Akun"
@@ -75,19 +75,20 @@ export default function LoginPage() {
               <div className="text-right -mt-2">
                 <a
                   href="/forgot-password"
-                  className="text-body-sm text-text-dark-primary hover:underline"
+                  className="text-body-sm md:text-body-md font-normal text-text-dark-disabled hover:underline"
                 >
                   Lupa Password?
                 </a>
               </div>
 
-              <Button type="submit" variant="secondary" disabled={isSubmitting}>
+              <Button type="submit" variant="solid" disabled={isSubmitting}>
                 {isSubmitting ? "Memproses..." : "Masuk"}
               </Button>
 
               <Button
                 type="button"
-                variant="primary"
+                color="primary"
+                variant="soft"
                 onClick={() => navigate("/register")}
               >
                 Daftar

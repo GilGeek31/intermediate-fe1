@@ -53,7 +53,7 @@ export default function Hero({
             <button
               onClick={onCtaClick}
               className="bg-primary-600 hover:bg-primary-500 hover:text-text-dark-primary
-               text-white font-semibold text-body-md px-2 py-2
+               text-white text-body-md px-2 py-2
                 rounded-lg transition-colors mt-2"
             >
               {ctaText}

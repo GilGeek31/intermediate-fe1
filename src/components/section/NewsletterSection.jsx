@@ -48,7 +48,7 @@ export default function NewsletterSection({ backgroundImage }) {
 
             <button
               type="submit"
-              className="shrink-0 bg-bg-primary hover:bg-secondary-600 text-white font-semibold
+              className="shrink-0 bg-bg-primary hover:bg-secondary-600 text-white
                     text-body-md px-6 py-3 sm:py-2.5 rounded-lg sm:rounded-full transition-colors"
             >
               Subscribe

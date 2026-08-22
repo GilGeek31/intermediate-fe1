@@ -72,7 +72,7 @@ export default function CourseSection() {
       <button
         onClick={handleAddClict}
         className=" flex items-center gap-1.5 bg-primary-500 hover:bg-primary-600
-        font-semibold text-body-sm px-4 py-2.5 rounded-lg shrink-0 "
+        text-body-sm px-4 py-2.5 rounded-lg shrink-0 "
       >
         <Plus size={16} />
         Tambah

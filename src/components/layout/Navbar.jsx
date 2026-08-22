@@ -20,7 +20,7 @@ export default function Navbar({ isLogin = false }) {
   }, []);
 
   return (
-    <header className="w-full bg-white border-b border-grey-200 sticky top-0 z-50">
+    <header className="w-full bg-bg-primary border-b border-grey-200 sticky top-0 z-50">
       <div className="w-full md:px-8 xl:px-32 h-16 flex items-center justify-between">
         {/* Logo */}
         <img

@@ -14,7 +14,7 @@ export default function CategoryTabs({ categories, onChange }) {
         <button
           key={cat}
           onClick={() => handleClick(cat)}
-          className={`shrink-0 px-0 py-2 text-body-sm font-semibold transition-colors
+          className={`shrink-0 px-0 py-2 text-body-sm transition-colors
             ${
               active === cat
                 ? "text-tertiary-100 border-b-4 border-b-amber-800"

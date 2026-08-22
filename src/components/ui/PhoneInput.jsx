@@ -6,7 +6,7 @@ const PhoneInput = forwardRef(({ label, required, error, ...rest }, ref) => {
   const [countryCode, setCountryCode] = useState("+62");
   return (
     <div className=" flex flex-col gap-1.5">
-      <label className=" text-body-sm font-semibold text-text-dark-primary ">
+      <label className=" text-body-sm md:text-body-md font-normal text-text-dark-primary ">
         {label} {required && <span className=" text-error-default ">*</span>}
       </label>
 
@@ -19,7 +19,7 @@ const PhoneInput = forwardRef(({ label, required, error, ...rest }, ref) => {
           inputMode="numeric"
           placeholder="812xxxxxxx"
           className={
-            'flex-1 min-w-0 px-4 rounded-lg border border-grey-300 text-body-md text-text-dark-primary focus:outline-none focus:ring-2 focus:ring-primary-300 ${error ? " border-error-default" : " border-grey-300"} '
+            'flex-1 min-w-0 px-4 p rounded-lg border border-grey-300 text-body-sm font-normal md:text-body-md text-text-dark-primary focus:outline-none focus:ring-2 focus:ring-primary-300 ${error ? " border-error-default" : " border-grey-300"} '
           }
           {...rest}
         />

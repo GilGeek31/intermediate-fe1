@@ -126,13 +126,19 @@ export default function RegisterPage() {
                 </a>
               </div>
 
-              <Button type="submit" variant="secondary" disabled={isSubmitting}>
+              <Button
+                type="submit"
+                color="primary"
+                variant="solid"
+                disabled={isSubmitting}
+              >
                 {isSubmitting ? "Memproses..." : "Daftar"}
               </Button>
 
               <Button
                 type="button"
-                variant="primary"
+                color="primary"
+                variant="soft"
                 onClick={() => console.log("ke halaman daftar")}
               >
                 Login

@@ -154,13 +154,13 @@ export default function CourseFormModal({
             <button
               type="button"
               onClick={onClose}
-              className="flex-1 py-2.5 rounded-lg border border-grey-200 text-text-dark-primary font-semibold hover:bg-grey-50"
+              className="flex-1 py-2.5 rounded-lg border border-grey-200 text-text-dark-primary hover:bg-grey-50"
             >
               Batal
             </button>
             <button
               type="submit"
-              className="flex-1 py-2.5 rounded-lg bg-primary-500 hover:bg-primary-600 text-white font-semibold"
+              className="flex-1 py-2.5 rounded-lg bg-primary-500 hover:bg-primary-600 text-white"
             >
               {initialData ? "Simpan" : "Tambah"}
             </button>

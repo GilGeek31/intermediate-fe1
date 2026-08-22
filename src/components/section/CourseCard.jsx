@@ -55,12 +55,12 @@ export default function CourseCard({
               className="w-8 h-8 rounded-full object-cover"
             />
             <div>
-              <p className="text-body-sm font-semibold text-text-dark-primary">
+              <p className="text-body-sm text-text-dark-primary">
                 {instructor.name}
               </p>
               <p className="text-body-sm text-text-dark-secondary">
                 {instructor.role} di{" "}
-                <span className="font-semibold">{instructor.company}</span>
+                <span className="text-body-md">{instructor.company}</span>
               </p>
             </div>
           </div>

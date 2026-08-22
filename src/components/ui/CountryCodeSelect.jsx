@@ -36,14 +36,14 @@ export default function CountryCodeSelect({ value, onChange }) {
         onClick={() => setIsOpen((prev) => !prev)}
         className="flex items-center gap-1 rounded-lg border border-grey-200 bg-grey-50 hover:bg-grey-100 transition-colors overflow-hidden"
       >
-        <div className="bg-bg-secondary-60 h-full py-4 px-2">
+        <div className=" bg-[#f4f5fa] h-full my-3 mx-2">
           <img
             src={selected.flag}
             alt={selected.name}
-            className="w-7 h-7 rounded-sm object-cover"
+            className="w-6 h-6 object-cover"
           />
         </div>
-        <span className=" bg-white py-4 text-body-md text-text-dark-primary">
+        <span className=" bg-white py-2 text-body-sm font-normal md:text-body-md text-text-dark-primary">
           {selected.code}
         </span>
         <ChevronDown
@@ -69,10 +69,10 @@ export default function CountryCodeSelect({ value, onChange }) {
                   alt={country.name}
                   className="w-6 h-4 rounded-sm object-cover"
                 />
-                <span className="text-body-sm text-text-dark-primary">
+                <span className="text-body-sm font-normal md:text-body-md text-text-dark-primary">
                   {country.name}
                 </span>
-                <span className="text-body-sm text-text-dark-secondary ml-auto">
+                <span className="text-body-sm font-normal md:text-body-md text-text-dark-secondary ml-auto">
                   {country.code}
                 </span>
               </button>

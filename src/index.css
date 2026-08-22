@@ -1,18 +1,58 @@
-@import "./assets/fonts/lato.css";
 @import "tailwindcss";
 
 @theme {
     /* ===== FONT ===== */
-    --font-sans: "Lato", sans-serif;
+    --font-sans: "DM Sans", sans-serif;
+    --font-heading: "Poppins", sans-serif;
+
+    --text-body-md: 16px;
+    --text-body-md--line-height: 140%;
+    --text-body-md--letter-spacing: 0.2px;
+    --text-body-md--font-weight: 700;
+
+    --text-body-sm: 14px;
+    --text-body-sm--line-height: 140%;
+    --text-body-sm--letter-spacing: 0.2px;
+    --text-body-sm--font-weight: 500;
+
+    /* HEADING */
+    --text-heading-1: 48px;
+    --text-heading-1--line-height: 110%;
+    --text-heading-1--letter-spacing: 0%;
+    --text-heading-1--font-weight: 700;
+
+    --text-heading-2: 40px;
+    --text-heading-2--line-height: 110%;
+    --text-heading-2--letter-spacing: 0%;
+    --text-heading-2--font-weight: 600;
+
+    --text-heading-3: 32px;
+    --text-heading-3--line-height: 110%;
+    --text-heading-3--letter-spacing: 0%;
+    --text-heading-3--font-weight: 600;
+
+    --text-heading-4: 24px;
+    --text-heading-4--line-height: 110%;
+    --text-heading-4--letter-spacing: 0%;
+    --text-heading-4--font-weight: 600;
+
+    --text-heading-5: 20px;
+    --text-heading-5--line-height: 110%;
+    --text-heading-5--letter-spacing: 0%;
+    --text-heading-5--font-weight: 600;
+
+    --text-heading-6: 18px;
+    --text-heading-6--line-height: 110%;
+    --text-heading-6--letter-spacing: 0%;
+    --text-heading-6--font-weight: 600;
+
 
     /* ===== BRAND COLORS ===== */
-    --color-primary-100: #3ECF4C;
+    --color-primary-100: #3ecf4c;
     --color-primary-200: #6be26b;
     --color-primary-300: #94f08b;
     --color-primary-400: #c0fab4;
     --color-primary-500: #e8fde1;
-    --color-primary-600: #2eb83d;
-    --color-primary-700: #229130;
 
     --color-secondary-100: #ffbd3a;
     --color-secondary-200: #ffd26b;
@@ -29,47 +69,41 @@
     /* ===== TEXT ===== */
     --color-text-dark-primary: #222325;
     --color-text-dark-secondary: #757575;
-    --color-text-news: #c1c2c4;
-    --color-text-dark-disabled: #b4b2b7;
+    --color-text-dark-disabled: #6c717a;
 
     --color-text-light-primary: #ffffff;
     --color-text-light-secondary: #c1c2c4;
     --color-text-light-disabled: #9d9ea1;
 
-    --color-text-button-primary: #3ecf4c;
-    --color-text-tertiary: #f64920;
-
     /* ===== BACKGROUND & BORDER ===== */
-    --color-bg-primary: #ffbd3a;
+    --color-bg-primary: #ffffff;
     --color-bg-base: #fffdf3;
-    --color-bg-secondary: #f4f5f8;
-    --color-border: #e5e6ea;
-    --color-bg-secondary-60: #f4f5fa;
-    --color-secondary-50: #fdfaf3;
+    --color-bg-secondary: #f9fafc;
+    --color-border: #e7e6e8;
 
     /* ===== STATE: INFO ===== */
-    --color-info-pressed: #0b4ea2;
-    --color-info-hover: #0d5fc9;
-    --color-info-default: #0d8bf0;
-    --color-info-bg: #e7f5fe;
+    --color-info-pressed: #044aa2;
+    --color-info-hover: #0663c2;
+    --color-info-default: #0980e2;
+    --color-info-bg: #ebf9fe;
 
     /* ===== STATE: SUCCESS ===== */
-    --color-success-pressed: #16805f;
-    --color-success-hover: #22a374;
-    --color-success-default: #3fcc84;
-    --color-success-bg: #e2fbe9;
+    --color-success-pressed: #1c9675;
+    --color-success-hover: #28b380;
+    --color-success-default: #38d189;
+    --color-success-bg: #e0fddf;
 
     /* ===== STATE: WARNING ===== */
-    --color-warning-pressed: #a3971a;
-    --color-warning-hover: #d1c519;
-    --color-warning-default: #f9e614;
-    --color-warning-bg: #fbf6cf;
+    --color-warning-pressed: #b5a40d;
+    --color-warning-hover: #d8c613;
+    --color-warning-default: #fce91b;
+    --color-warning-bg: #fcf8ca;
 
     /* ===== STATE: ERROR ===== */
-    --color-error-pressed: #a3241a;
-    --color-error-hover: #d1481f;
-    --color-error-default: #f9601e;
-    --color-error-bg: #fbe2d1;
+    --color-error-pressed: #b72315;
+    --color-error-hover: #db3d1f;
+    --color-error-default: #ff5c2b;
+    --color-error-bg: #fce3d1;
 
     /* ===== GREYSCALE ===== */
     --color-grey-50: #fafafa;
@@ -77,44 +111,9 @@
     --color-grey-200: #eeeeee;
     --color-grey-300: #e0e0e0;
     --color-grey-400: #bdbdbd;
-    --color-grey-500: #e7e6e8;
+    --color-grey-500: #9e9e9e;
     --color-grey-600: #757575;
     --color-grey-700: #616161;
     --color-grey-800: #424242;
     --color-grey-900: #212121;
-
-    /* ===== TYPOGRAPHY: HEADINGS ===== */
-    --text-h1: 48px;
-    --text-h1--line-height: 1.2;
-    --text-h1--font-weight: 700;
-
-    --text-h2: 40px;
-    --text-h2--line-height: 1.2;
-    --text-h2--font-weight: 700;
-
-    --text-h3: 32px;
-    --text-h3--line-height: 1.25;
-    --text-h3--font-weight: 700;
-
-    --text-h4: 24px;
-    --text-h4--line-height: 1.3;
-    --text-h4--font-weight: 700;
-
-    --text-h5: 20px;
-    --text-h5--line-height: 1.3;
-    --text-h5--font-weight: 700;
-
-    --text-h6: 18px;
-    --text-h6--line-height: 1.4;
-    --text-h6--font-weight: 700;
-
-    /* ===== TYPOGRAPHY: BODY ===== */
-    --text-body-lg: 18px;
-    --text-body-lg--line-height: 1.5;
-
-    --text-body-md: 16px;
-    --text-body-md--line-height: 1.5;
-
-    --text-body-sm: 14px;
-    --text-body-sm--line-height: 1.5;
 }

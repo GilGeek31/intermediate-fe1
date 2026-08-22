@@ -10,7 +10,7 @@ export default function FooterColumn({ title, links }) {
         type="button"
         onClick={() => setIsOpen((prev) => !prev)}
         className="flex items-center justify-between w-full md:pointer-events-none
-          text-body-md font-semibold text-text-dark-primary"
+          text-body-md text-text-dark-primary"
       >
         {title}
         <ChevronRight
