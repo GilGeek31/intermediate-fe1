@@ -1,3 +1,4 @@
+import Button from "../ui/Button";
 export default function Hero({
   backgroundImage,
   title,
@@ -6,7 +7,7 @@ export default function Hero({
   ctaText, // kalau tidak diisi, tombol tidak dirender
   onCtaClick,
   rating, // { value: 3.5, count: 86 } — opsional, tidak dirender kalau undefined
-  minHeight = "py-16 md:py-24", // bisa di-override untuk hero yang lebih pendek
+  minHeight = "py-6 md:py-12", // bisa di-override untuk hero yang lebih pendek
 }) {
   const isCenter = align === "center";
 
@@ -19,18 +20,18 @@ export default function Hero({
         <div className="absolute inset-0 bg-black/60" />
 
         <div
-          className={`relative flex flex-col gap-4 px-6 md:px-12 ${minHeight}
+          className={`relative flex flex-col gap-4 px-6 justify-center h-[400px] md:px-12 ${minHeight}
             ${isCenter ? "items-center text-center" : "items-start text-left"}`}
         >
           <h1
-            className={`text-white font-bold text-h3 md:text-4xl lg:text-h2 leading-tight
+            className={`text-text-light-primary font-heading font-bold text-heading-4 md:text-heading-2 lg:text-heading-1 leading-tight
             ${isCenter ? "max-w-3xl" : "max-w-2xl"}`}
           >
             {title}
           </h1>
 
           <p
-            className={`text-white/90 text-body-sm md:text-body-md ${isCenter ? "max-w-2xl" : "max-w-xl"}`}
+            className={`text-text-light-primary text-body-sm md:text-body-md md:font-normal ${isCenter ? "max-w-2xl" : "max-w-xl"}`}
           >
             {subtitle}
           </p>
@@ -51,10 +52,9 @@ export default function Hero({
 
           {ctaText && (
             <button
+              type="button"
               onClick={onCtaClick}
-              className="bg-primary-600 hover:bg-primary-500 hover:text-text-dark-primary
-               text-white text-body-md px-2 py-2
-                rounded-lg transition-colors mt-2"
+              className=" bg-primary-100 px-1.5 md:px-6 py-3 rounded-xl max-w-fit text-body-sm font-normal md:text-body-md text-text-light-primary "
             >
               {ctaText}
             </button>

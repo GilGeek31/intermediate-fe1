@@ -3,8 +3,8 @@ export default function GoogleButton({ onClick }) {
     <button
       type="button"
       onClick={onClick}
-      className="w-full flex items-center justify-center gap-2 py-3 rounded-lg border border-grey-200
-        text-body-md text-text-dark-primary-200 hover:bg-grey-50 transition-colors"
+      className="w-full flex items-center justify-center gap-2 py-2 md:py-3 rounded-lg border border-grey-200
+        text-body-sm font-bold md:text-body-md text-text-dark-primary-200 hover:bg-grey-50 transition-colors"
     >
       <svg width="18" height="18" viewBox="0 0 18 18">
         <path

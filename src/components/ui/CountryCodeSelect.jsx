@@ -34,21 +34,21 @@ export default function CountryCodeSelect({ value, onChange }) {
       <button
         type="button"
         onClick={() => setIsOpen((prev) => !prev)}
-        className="flex items-center gap-1 rounded-lg border border-grey-200 bg-grey-50 hover:bg-grey-100 transition-colors overflow-hidden"
+        className="  flex items-center gap-1 rounded-lg border border-grey-200 bg-bg-primary transition-colors overflow-hidden"
       >
-        <div className=" bg-[#f4f5fa] h-full my-3 mx-2">
+        <div className="bg-[#f4f5fa] h-full py-3 px-2.5">
           <img
             src={selected.flag}
             alt={selected.name}
             className="w-6 h-6 object-cover"
           />
         </div>
-        <span className=" bg-white py-2 text-body-sm font-normal md:text-body-md text-text-dark-primary">
+        <span className=" py-2 text-body-sm font-normal md:text-body-md text-text-dark-primary">
           {selected.code}
         </span>
         <ChevronDown
           size={16}
-          className={`bg-bg-base text-grey-500 transition-transform pr-1 ${isOpen ? "rotate-180" : ""}`}
+          className={` md:ml-8 md:mr-4 text-grey-500 transition-transform pr-1 ${isOpen ? "rotate-180" : ""}`}
         />
       </button>
 

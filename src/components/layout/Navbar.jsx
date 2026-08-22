@@ -34,7 +34,7 @@ export default function Navbar({ isLogin = false }) {
           <nav className="hidden md:flex items-center gap-6">
             <a
               href="/kategori"
-              className="text-body-md text-text-dark-primary hover:text-text-dark-secondary"
+              className="text-body-md font-medium text-text-dark-secondary"
             >
               Kategori
             </a>
@@ -51,27 +51,27 @@ export default function Navbar({ isLogin = false }) {
               </button>
               {isAvatarOpen && (
                 <div
-                  className="absolute right-0 top-12 w-40 bg-white border border-grey-200 rounded-md shadow-lg flex flex-col py-2 z-50"
+                  className="absolute right-0 text-body-md font-medium text-text-dark-secondary tex top-12 w-40 bg-white border border-grey-200 rounded-md shadow-lg flex flex-col py-2 z-50"
                   role="menu"
                 >
                   <a
                     href="#"
-                    className="px-4 py-2 text-body-sm hover:bg-grey-50 border-b-1 border-grey-500"
+                    className="px-4 py-2  hover:bg-grey-50 border-b border-border"
                     role="menuitem"
                   >
                     Profil Saya
                   </a>
                   <a
                     href="#"
-                    className="px-4 py-2 text-body-sm hover:bg-grey-50 border-b-1 border-grey-500"
+                    className="px-4 py-2  hover:bg-grey-50 border-b border-border"
                     role="menuitem"
                   >
                     Pengaturan
                   </a>
                   <a
                     href="#"
-                    className=" flex gap-2 px-4 py-2 text-body-sm hover:bg-grey-50 text-red-500 border-b-1 border-grey-500"
-                    role="menuitem"
+                    className=" flex gap-2 px-4 py-2 hover:bg-grey-50 text-red-500 border-b border-border"
+                    role="  "
                   >
                     Keluar <LogOut size={20} />
                   </a>
@@ -95,40 +95,40 @@ export default function Navbar({ isLogin = false }) {
       {isMenuOpen && (
         <nav
           className="md:hidden absolute top-15 
-            w-full bg-white flex flex-col pb-4 border-t border-grey-200"
+            w-full bg-white text-body-md text-text-dark-secondary font-medium flex flex-col pb-2 rounded-lg border-b border-border"
         >
           <a
             href="/kategori"
-            className="py-3 pl-3 text-body-md text-text-dark-primary hover:text-text-dark-secondary
-              border-1 border-grey-500"
+            className="py-3 pl-3 
+              border-y border-border"
           >
             Kategori
           </a>
           <a
             href="/kategori"
-            className="py-3 pl-3 text-body-md text-text-dark-primary hover:text-text-dark-secondary
-              border-1 border-grey-500"
+            className="py-3 pl-3
+              border-b border-border"
           >
             Profil Saya
           </a>
           <a
             href="/kategori"
-            className="py-3 pl-3 text-body-md text-text-dark-primary hover:text-text-dark-secondary 
-              border-1 border-grey-500"
+            className="py-3 pl-3 
+              border-b border-border"
           >
             Kelas Saya
           </a>
           <a
             href="/kategori"
-            className="py-3 pl-3 text-body-md text-text-dark-primary hover:text-text-dark-secondary
-              border-1 border-grey-500"
+            className="py-3 pl-3
+              border-b border-border"
           >
             Pesanan Saya
           </a>
           <a
             href="/kategori"
-            className=" flex gap-2 py-3 pl-3 text-body-md text-red-500 hover:text-red-400
-              border-1 border-grey-500"
+            className=" flex gap-2 py-3 pl-3  text-red-500 hover:text-red-400
+              border-b border-border"
           >
             Keluar <LogOut size={20} />
           </a>

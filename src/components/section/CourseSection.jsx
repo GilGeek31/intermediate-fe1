@@ -59,43 +59,46 @@ export default function CourseSection() {
 
   // TODO: nanti filter dummyCourses berdasarkan activeCategory saat data sudah dari API
   return (
-    <section className="w-full px-4 md:px-8 mt-16 xl:px-32">
-      <div className="text-center mb-6">
-        <h2 className="text-h4 text-text-dark-primary">
-          Koleksi Video Pembelajaran Unggulan
-        </h2>
-        <p className="text-body-md text-text-dark-secondary mt-1">
-          Jelajahi Dunia Pengetahuan Melalui Pilihan Kami!
-        </p>
-      </div>
+    <>
+      <section className="w-full px-4 md:px-8 mt-5 md:mt-16 xl:px-32">
+        <div className="md:text-center mb-6">
+          <h2 className="font-heading text-heading-4 md:text-heading-3 text-text-dark-primary">
+            Koleksi Video Pembelajaran Unggulan
+          </h2>
+          <p className="text-body-sm md:text-body-md text-text-dark-secondary mt-3">
+            Jelajahi Dunia Pengetahuan Melalui Pilihan Kami!
+          </p>
+        </div>
 
+        <CategoryTabs categories={categories} onChange={setActiveCategory} />
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
+          {courses.map((course) => (
+            <CourseCard
+              key={course.id}
+              {...course}
+              onEdit={handleEditClick}
+              onDelete={handleDeleteClick}
+            />
+          ))}
+        </div>
+      </section>
       <button
         onClick={handleAddClict}
-        className=" flex items-center gap-1.5 bg-primary-500 hover:bg-primary-600
-        text-body-sm px-4 py-2.5 rounded-lg shrink-0 "
+        className="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full 
+    bg-primary-100 text-white
+    shadow-[0_0_15px_3px_rgba(34,197,94,0.6),0_0_30px_8px_rgba(34,197,94,0.4)]
+    hover:shadow-[0_0_20px_5px_rgba(34,197,94,0.8),0_0_40px_12px_rgba(34,197,94,0.5)]
+    flex items-center justify-center transition-shadow duration-300"
       >
-        <Plus size={16} />
-        Tambah
+        <Plus size={20} md:size={40} strokeWidth={2} />
       </button>
-
-      <CategoryTabs categories={categories} onChange={setActiveCategory} />
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
-        {courses.map((course) => (
-          <CourseCard
-            key={course.id}
-            {...course}
-            onEdit={handleEditClick}
-            onDelete={handleDeleteClick}
-          />
-        ))}
-      </div>
       <CourseFormModal
         isOpen={isModalOpen}
         onClose={() => setisModalOpen(false)}
         onSubmit={handleFormSubmit}
         initialData={editingCourse}
       />
-    </section>
+    </>
   );
 }

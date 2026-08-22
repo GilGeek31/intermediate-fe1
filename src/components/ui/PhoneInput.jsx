@@ -10,7 +10,7 @@ const PhoneInput = forwardRef(({ label, required, error, ...rest }, ref) => {
         {label} {required && <span className=" text-error-default ">*</span>}
       </label>
 
-      <div className="flex gap-2">
+      <div className="flex gap-2 md:gap-6">
         <CountryCodeSelect value={countryCode} onChange={setCountryCode} />
 
         <input

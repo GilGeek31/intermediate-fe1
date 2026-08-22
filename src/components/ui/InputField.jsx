@@ -18,7 +18,7 @@ const InputField = forwardRef(
             ref={ref}
             type={inputType}
             className={`w-full py-3 px-4 rounded-lg border text-text-dark-primary 
-                        text-body-md transition-colors duration-150 focus:outline-none focus:ring-2
+                        text-body-sm font-normal md:text-body-md transition-colors duration-150 focus:outline-none focus:ring-2
                          focus:ring-primary-300
                          ${error ? "border-error-default" : "border-gray-200"}`}
             {...rest}
