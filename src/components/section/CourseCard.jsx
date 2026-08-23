@@ -14,11 +14,11 @@ export default function CourseCard({
 }) {
   return (
     <div
-      className="flex flex-col mb-2 p-4 max-w-sm md:block bg-white
+      className="flex w-full flex-col items-center mb-2 p-3 max-w-[384px] md:block bg-white
      rounded-xl border border-amber-600 hover:shadow-md transition-shadow"
     >
       <div className=" relative group flex flex-row gap-2 md:flex-col md:justify-center md:items-center md:gap-0">
-        <div className="absolute top-4 right-3 flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity z-10">
+        <div className="absolute top-0 right-0 flex gap-3 opacity-0 group-hover:opacity-100 transition-opacity z-10">
           <button
             onClick={() => onEdit(id)}
             className=" bg-white rounded-full p-1.5 shadow hover:bg-grey-50 "
@@ -37,38 +37,44 @@ export default function CourseCard({
         <img
           src={thumbnail}
           alt={title}
-          className=" rounded-xl w-20 h-20 md:w-86 md:h-48 mb-2 object-cover"
+          className=" shrink-0 rounded-xl w-21 h-21 md:w-86 md:h-48 mb-2 object-cover"
         />
 
         <div className="flex flex-col gap-1">
-          <h3 className="text-body-md font-bold text-text-dark-primary line-clamp-2">
+          <h3 className=" font-heading text-heading-7 md:text-heading-6 text-text-dark-primary line-clamp-2">
             {title}
           </h3>
-          <p className="hidden md:block text-body-sm text-text-dark-secondary line-clamp-2">
+          <p className="hidden md:block text-body-sm md:text-body-md font-normal text-text-dark-secondary line-clamp-2">
             {description}
           </p>
 
-          <div className="flex items-center gap-2 mt-1">
+          <div className="flex gap-2 mt-1">
             <img
               src={instructor.avatar}
               alt={instructor.name}
-              className="w-8 h-8 rounded-full object-cover"
+              className="w-9 h-9 rounded-lg object-cover"
             />
             <div>
-              <p className="text-body-sm text-text-dark-primary">
+              <p className="text-body-sm sm:text-body-md text-text-dark-primary">
                 {instructor.name}
               </p>
               <p className="text-body-sm text-text-dark-secondary">
-                {instructor.role} di{" "}
-                <span className="text-body-md">{instructor.company}</span>
+                {instructor.role}
+                <span className=" hidden sm:inline sm:text-body-sm">
+                  {" "}
+                  di{""}{" "}
+                </span>
+                <span className="hidden sm:inline md:text-body-md">
+                  {instructor.company}
+                </span>
               </p>
             </div>
           </div>
         </div>
       </div>
-      <div className=" flex items-center justify-between md:pt-2 border-grey-100">
+      <div className=" flex w-full gap-2 items-center justify-between md:pt-2 flex-row border-grey-100">
         <Rating value={rating.value} count={rating.count} />
-        <span className=" text-h4 font-bold text-text-button-primary">
+        <span className=" shrink-0 font-heading text-heading-5 md:text-heading-4 text-primary-100 text-text-button-primary">
           {price}
         </span>
       </div>

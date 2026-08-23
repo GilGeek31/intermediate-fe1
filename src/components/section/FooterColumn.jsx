@@ -10,7 +10,7 @@ export default function FooterColumn({ title, links }) {
         type="button"
         onClick={() => setIsOpen((prev) => !prev)}
         className="flex items-center justify-between w-full md:pointer-events-none
-          text-body-md text-text-dark-primary"
+          font-open-sans text-open-md sm:font-sans sm:text-body-md font-bold text-text-dark-primary"
       >
         {title}
         <ChevronRight
@@ -27,7 +27,7 @@ export default function FooterColumn({ title, links }) {
           <li key={link.label}>
             <a
               href={link.href}
-              className="text-body-sm text-text-dark-secondary hover:text-text-dark-disabled"
+              className="text-body-sm sm:text-body-md font-normal text-text-dark-secondary hover:text-text-dark-disabled"
             >
               {link.label}
             </a>

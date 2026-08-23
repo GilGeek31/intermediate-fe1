@@ -60,7 +60,7 @@ export default function CourseSection() {
   // TODO: nanti filter dummyCourses berdasarkan activeCategory saat data sudah dari API
   return (
     <>
-      <section className="w-full px-4 md:px-8 mt-5 md:mt-16 xl:px-32">
+      <section className="w-full max-w-300 px-4 md:px-4 mt-5 md:mt-16 ">
         <div className="md:text-center mb-6">
           <h2 className="font-heading text-heading-4 md:text-heading-3 text-text-dark-primary">
             Koleksi Video Pembelajaran Unggulan
@@ -72,7 +72,7 @@ export default function CourseSection() {
 
         <CategoryTabs categories={categories} onChange={setActiveCategory} />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6 justify-items-center">
           {courses.map((course) => (
             <CourseCard
               key={course.id}
@@ -86,10 +86,10 @@ export default function CourseSection() {
       <button
         onClick={handleAddClict}
         className="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full 
-    bg-primary-100 text-white
-    shadow-[0_0_15px_3px_rgba(34,197,94,0.6),0_0_30px_8px_rgba(34,197,94,0.4)]
-    hover:shadow-[0_0_20px_5px_rgba(34,197,94,0.8),0_0_40px_12px_rgba(34,197,94,0.5)]
-    flex items-center justify-center transition-shadow duration-300"
+        bg-primary-100 text-white
+        shadow-[0_0_15px_3px_rgba(34,197,94,0.6),0_0_30px_8px_rgba(34,197,94,0.4)]
+        hover:shadow-[0_0_20px_5px_rgba(34,197,94,0.8),0_0_40px_12px_rgba(34,197,94,0.5)]
+        flex items-center justify-center transition-shadow duration-300"
       >
         <Plus size={20} md:size={40} strokeWidth={2} />
       </button>

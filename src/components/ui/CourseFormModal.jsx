@@ -62,7 +62,7 @@ export default function CourseFormModal({
 
   return (
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 px-4">
-      <div className="bg-white rounded-2xl p-6 w-full max-w-md max-h-[90vh] overflow-y-auto">
+      <div className="bg-white rounded-2xl p-6 w-full max-w-md max-h-[90vh]">
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-h6 text-text-dark-primary">
             {initialData ? "Edit Course" : "Tambah Course"}
@@ -131,7 +131,7 @@ export default function CourseFormModal({
             required
             className="px-4 py-2.5 rounded-lg border border-grey-200 bg-white text-body-md focus:outline-none focus:ring-2 focus:ring-primary-300"
           />
-          <div className="flex gap-3">
+          <div className="flex flex-col gap-3 w-full">
             <input
               name="instructorRole"
               value={form.instructorRole}
@@ -154,13 +154,13 @@ export default function CourseFormModal({
             <button
               type="button"
               onClick={onClose}
-              className="flex-1 py-2.5 rounded-lg border border-grey-200 text-text-dark-primary hover:bg-grey-50"
+              className="flex-1 py-2.5 rounded-lg border bg-green-50 text-green-500  hover:bg-green-100"
             >
               Batal
             </button>
             <button
               type="submit"
-              className="flex-1 py-2.5 rounded-lg bg-primary-500 hover:bg-primary-600 text-white"
+              className="flex-1 py-2.5 rounded-lg bg-primary-100 hover:bg-primary-300 text-text-light-primary"
             >
               {initialData ? "Simpan" : "Tambah"}
             </button>

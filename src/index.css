@@ -4,6 +4,12 @@
     /* ===== FONT ===== */
     --font-sans: "DM Sans", sans-serif;
     --font-heading: "Poppins", sans-serif;
+    --font-open-sans: "Open Sans", sans-serif;
+
+    --text-body-lg: 18px;
+    --text-body-lg--line-height: 140%;
+    --text-body-lg--letter-spacing: 0.2px;
+
 
     --text-body-md: 16px;
     --text-body-md--line-height: 140%;
@@ -45,6 +51,20 @@
     --text-heading-6--line-height: 110%;
     --text-heading-6--letter-spacing: 0%;
     --text-heading-6--font-weight: 600;
+
+    --text-heading-7: 16px;
+    --text-heading-7--line-height: 110%;
+    --text-heading-7--letter-spacing: 0%;
+    --text-heading-7--font-weight: 600;
+
+    /* OPEN SANS */
+    --text-open-sm: 14px;
+    --text-open-sm--line-height: 140%;
+    --text-open-sm--letter-spacing: 0.2px;
+
+    --text-open-md: 16px;
+    --text-open-sm--line-height: 140%;
+    --text-open-sm--letter-spacing: 0.2px;
 
 
     /* ===== BRAND COLORS ===== */
