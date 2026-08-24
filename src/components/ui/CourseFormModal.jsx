@@ -9,6 +9,8 @@ const emptyForm = {
   instructorName: "",
   instructorRole: "",
   instructorCompany: "",
+  ratingValue: 0,
+  ratingCount: 80,
 };
 
 export default function CourseFormModal({
@@ -30,6 +32,9 @@ export default function CourseFormModal({
         instructorName: initialData.instructor.name,
         instructorRole: initialData.instructor.role,
         instructorCompany: initialData.instructor.company,
+        ratingValue: initialData.rating.value,
+        ratingCount: initialData.rating?.count ?? 80,
+        price: initialData.price,
       });
     } else {
       setForm(emptyForm);
@@ -55,7 +60,10 @@ export default function CourseFormModal({
         company: form.instructorCompany,
         avatar: "/img/card-avatar/avatar-01.png",
       },
-      rating: initialData?.rating || { value: 0, count: 0 },
+      rating: {
+        value: Number(form.ratingValue),
+        count: Number(form.ratingCount),
+      },
     });
     onClose();
   };
@@ -64,7 +72,7 @@ export default function CourseFormModal({
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 px-4">
       <div className="bg-white rounded-2xl p-6 w-full max-w-md max-h-[90vh]">
         <div className="flex items-center justify-between mb-4">
-          <h3 className="text-h6 text-text-dark-primary">
+          <h3 className="text-body-md text-text-dark-primary">
             {initialData ? "Edit Course" : "Tambah Course"}
           </h3>
           <button
@@ -82,7 +90,7 @@ export default function CourseFormModal({
             onChange={handleChange}
             placeholder="Judul course"
             required
-            className="px-4 py-2.5 rounded-lg border border-grey-200 bg-white text-body-md focus:outline-none focus:ring-2 focus:ring-primary-300"
+            className="px-4 py-2.5 rounded-lg border border-grey-200 bg-white text-body-md font-normal focus:outline-none focus:ring-2 focus:ring-primary-300"
           />
           <textarea
             name="description"
@@ -91,7 +99,7 @@ export default function CourseFormModal({
             placeholder="Deskripsi singkat"
             required
             rows={3}
-            className="px-4 py-2.5 rounded-lg border border-grey-200 bg-white text-body-md focus:outline-none focus:ring-2 focus:ring-primary-300"
+            className="px-4 py-2.5 rounded-lg border border-grey-200 bg-white text-body-md font-normal focus:outline-none focus:ring-2 focus:ring-primary-300"
           />
 
           {/* <input
@@ -113,7 +121,7 @@ export default function CourseFormModal({
                 setForm({ ...form, thumbnail: previewUrl });
               }
             }}
-            className="px-4 py-2.5 rounded-lg border border-grey-200 bg-white text-body-md"
+            className="px-4 py-2.5 rounded-lg border font-normal border-grey-200 bg-white text-body-md"
           />
           <input
             name="price"
@@ -121,7 +129,7 @@ export default function CourseFormModal({
             onChange={handleChange}
             placeholder="Harga (misal: Rp. 300k)"
             required
-            className="px-4 py-2.5 rounded-lg border border-grey-200 bg-white text-body-md focus:outline-none focus:ring-2 focus:ring-primary-300"
+            className="px-4 py-2.5 rounded-lg border border-grey-200 bg-white text-body-md font-normal focus:outline-none focus:ring-2 focus:ring-primary-300"
           />
           <input
             name="instructorName"
@@ -129,16 +137,26 @@ export default function CourseFormModal({
             onChange={handleChange}
             placeholder="Nama instruktur"
             required
-            className="px-4 py-2.5 rounded-lg border border-grey-200 bg-white text-body-md focus:outline-none focus:ring-2 focus:ring-primary-300"
+            className="px-4 py-2.5 rounded-lg border border-grey-200 bg-white text-body-md font-normal focus:outline-none focus:ring-2 focus:ring-primary-300"
           />
-          <div className="flex flex-col gap-3 w-full">
+          <input
+            type="number"
+            name="ratingValue"
+            value={form.ratingValue}
+            onChange={handleChange}
+            placeholder="Rating Course"
+            required
+            className="px-4 py-2.5 rounded-lg border border-grey-200 bg-white text-body-md font-normal focus:outline-none focus:ring-2 focus:ring-primary-300"
+          />
+
+          <div className="flex justify-between gap-3 w-full">
             <input
               name="instructorRole"
               value={form.instructorRole}
               onChange={handleChange}
               placeholder="Jabatan"
               required
-              className="flex-1 px-4 py-2.5 rounded-lg border border-grey-200 bg-white text-body-md focus:outline-none focus:ring-2 focus:ring-primary-300"
+              className="py-2.5 rounded-lg border border-grey-200 bg-white text-body-md font-normal focus:outline-none focus:ring-2 focus:ring-primary-300"
             />
             <input
               name="instructorCompany"
@@ -146,7 +164,7 @@ export default function CourseFormModal({
               onChange={handleChange}
               placeholder="Perusahaan"
               required
-              className="flex-1 px-4 py-2.5 rounded-lg border border-grey-200 bg-white text-body-md focus:outline-none focus:ring-2 focus:ring-primary-300"
+              className="px-4 py-2.5 rounded-lg border border-grey-200 bg-white text-body-md font-normal focus:outline-none focus:ring-2 focus:ring-primary-300"
             />
           </div>
 

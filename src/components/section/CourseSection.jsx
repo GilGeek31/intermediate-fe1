@@ -16,7 +16,7 @@ const categories = [
   "Bisnis",
 ];
 
-export default function CourseSection() {
+export default function CourseSection({ sectionRef }) {
   const [courses, setCourses] = useState(initialCourses);
   const [isModalOpen, setisModalOpen] = useState(false);
   const [editingCourse, setEditingCourse] = useState(null);
@@ -52,15 +52,17 @@ export default function CourseSection() {
       );
     } else {
       //create
-      const newCourse = { id: Date.now, ...formdata };
+      const newCourse = { id: Date.now(), ...formdata };
       setCourses((prev) => [newCourse, ...prev]);
     }
   };
 
-  // TODO: nanti filter dummyCourses berdasarkan activeCategory saat data sudah dari API
   return (
     <>
-      <section className="w-full max-w-300 px-4 md:px-4 mt-5 md:mt-16 ">
+      <section
+        ref={sectionRef}
+        className="w-full max-w-300 px-4 md:px-4 mt-5 md:mt-16 "
+      >
         <div className="md:text-center mb-6">
           <h2 className="font-heading text-heading-4 md:text-heading-3 text-text-dark-primary">
             Koleksi Video Pembelajaran Unggulan
